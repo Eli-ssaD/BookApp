@@ -16,11 +16,31 @@
 <div class="topnav">
     <a class="active" href="/index">Home</a>
     <a href="/index">My Book App</a>
-    <a href="books-i-like.html">Books To Read</a>
-    <a href="#about">About</a>
+    <a href="wishlist.html">Books To Read</a>
     <a href="search-book.html" class="split">Search</a>
   </div>
 
+
+
+
+  <body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+    
+    <br>
+   <input id="input" placeholder="enter book name">
+   
+    <button class="btn btn-primary" value="search" onclick="getbooks()">Search here....</button><br>
+    <a th:href="@{/index}" class="btn btn-secondary">Clear</a>
+    <div id="output"></div> 
+
+
+</div>
+</div>
+</div>
+    
+</body>
 <script>
     function getbooks(){
         
@@ -33,24 +53,8 @@
             });
             
             }
+
+  
+            
 </script>
-
-
-  <body>
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-6">
-    
-    <br>
-   <input id="input" placeholder="enter book name">
-   
-    <button class="btn btn-primary" value="search" onclick="getbooks()">Search here....</button><br>
-    <div id="output"></div>  
-
-</div>
-</div>
-</div>
-    
-</body>
-
 </html>

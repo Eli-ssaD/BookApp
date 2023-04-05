@@ -23,7 +23,9 @@ public class BookController {
      * @param model
      * @return
      */
-    @GetMapping({"/index", "/search"})
+    
+    
+     @GetMapping({"/index", "/search"})
     public String showBooks(Model model, String keyword) {
         if (keyword != null) {
             model.addAttribute("books",
