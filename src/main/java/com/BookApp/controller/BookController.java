@@ -3,6 +3,7 @@ package com.BookApp.controller;
 import com.BookApp.model.Book;
 import com.BookApp.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @Controller
 public class BookController {
+    
 
     @Autowired
     private BookRepository bookRepository;
@@ -23,9 +25,7 @@ public class BookController {
      * @param model
      * @return
      */
-    
-    
-     @GetMapping({"/index", "/search"})
+    @GetMapping({"/Home", "/index", "/search"})
     public String showBooks(Model model, String keyword) {
         if (keyword != null) {
             model.addAttribute("books",
